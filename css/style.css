@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(236, 229, 239); /* Fundo unificado lilás claro */
+  color: #333;
+}
+
+header {
+  background-color: rgb(60, 16, 57); /* Roxo escuro */
+  padding: 20px 30px;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu img {
+  max-width: 90px;
+  margin-bottom: 20px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: rgb(192, 161, 194); /* Roxo mais claro ao passar o mouse */
+}
+
+#hero {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(60, 16, 57); /* Roxo escuro para manter contraste com fundo claro */
+  padding: 20px;
+  background-color: rgb(192, 161, 194);
+}
+
+#hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 20px;
+  max-width: 600px;
+}
+
+.btn-cta {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(60, 16, 57);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: rgb(98, 47, 94); /* Roxo médio */
+}
+
+section {
+  padding: 40px 20px;
+  background-color: rgb(236, 229, 239); /* Lilás claro */
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(60, 16, 57); /* Títulos roxos escuros */
+}
+
+.beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.beneficios-item {
+  width: 200px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.beneficios-item:hover {
+  background-color: rgb(128, 104, 126); /* Roxo claro ao passar o mouse */
+  color: white;
+  transform: translateY(-5px);
+}
+
+.beneficios-item i {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.depoimentos-item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: fade 0.5s ease-in-out;
+}
+
+.depoimentos-item.ativo {
+  display: flex;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.avatar {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid rgb(128, 104, 126); /* Roxo claro */
+  margin-bottom: 10px;
+}
+
+.carousel-botoes button {
+  background-color: rgb(60, 16, 57); /* Roxo escuro */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-botoes button:hover {
+  background-color: rgb(98, 47, 94); /* Roxo médio */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(90, 72, 88);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(60, 16, 57);
+  border-radius: 4px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: rgb(60, 16, 57);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(98, 47, 94);
+}
+
+
+footer {
+  background-color: rgb(60, 16, 57); /* Roxo escuro */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  color: white;   
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: rgb(230, 200, 235); /* Lilás claro */
+}

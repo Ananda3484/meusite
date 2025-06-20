@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Memorização</title>
+    <link rel="icon" type="image/png" href="../projeto_ananda/img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <img src="../projeto_ananda/img/logo.png" alt="logo">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre o curso</a></li>
+                    <li><a href="#">Benefícios</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Melhore sua memória, aumente sua performance!</h1>
+            <p>Aprenda técnicas comprovadas de memorização para
+                aosterar seus estudos e dominar qualquer conteúdo.</p>
+            <button class="btn-cta">Quero aprender agora</button>
+        </section>
+        <section id="about">
+            <h1>Sobre o Curso</h1>
+            <center><i class="fa-solid fa-web-awesome"></i>
+                <p>Um treinamento intensivo e prático que ensina
+                    como sua memória funciona e como usá-la em seus estudos
+                    e aprender qualquer conteúdo.</p>
+            </center>
+        </section>
+        <section id="beneficios">
+            <h1>Benefícios</h1>
+            <div class="beneficios">
+                <div class="beneficios-item">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Estude menos, aprenda mais</p>
+                </div>
+                <div class="beneficios-item">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <p>Foco e Clareza na hora de estudar</p>
+                </div>
+                <div class="beneficios-item">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <p>Técnicas baseadas em neurociência</p>
+                </div>
+                <div class="beneficios-item">
+                    <i class="fa-solid fa-paper-plane"></i></i>
+                    <p>Acelere sua preparação para concursos e provas.</p>
+                </div>
+            </div>
+        </section>
+        <div class="depoimentos">
+            <div class="depoimentos-item ativo">
+                <img class="avatar" src="https://randomuser.me/api/portraits/men/34.jpg">
+                <blockquote>Aprenda muito com muita técnica <cite>– Jorginho</cite></blockquote>
+            </div>
+            <div class="depoimentos-item">
+                <img class="avatar" src="https://randomuser.me/api/portraits/women/65.jpg">
+                <blockquote>Transformou minha forma de estudar! <cite>– Ana Paula</cite></blockquote>
+            </div>
+            <div class="depoimentos-item">
+                <img class="avatar" src="https://randomuser.me/api/portraits/men/22.jpg">
+                <blockquote>Me ajudou a passar no concurso dos meus sonhos! <cite>– Carlos</cite></blockquote>
+            </div>
+
+            <div class="carousel-botoes">
+                <center><button id="anterior">Anterior</button>
+                    <button id="proximo">Próximo</button>
+                </center>
+            </div>
+        </div>
+
+
+        <section id="cadastro">
+            <div class="container">
+                <h2>Formulário de Contato</h2>
+
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="consentimento" name="consentimento" required>
+                        <label for="consentimento">Eu concordo com os termos e condições.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Ananda Santos - Todos os direitos reservados</p>
+        <div class="social-icons">
+            <p>Siga-nos nas redes sociais</p>
+            <a href="https://www.linkedin.com/in/ananda-s-bbbbb526b" target="_blank" <i
+                class="fa-solid fa-circle-user"></i>
+            </a>
+            <a href="https://www.instagram.com/ananda.sntx/" target="_blank" <i class="fa-solid fa-camera-retro"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        const depoimentos = document.querySelectorAll('.depoimentos-item');
+        let indiceAtual = 0;
+
+        function mostrarDepoimento(indice) {
+            depoimentos.forEach((item, i) => {
+                item.classList.remove('ativo');
+                if (i === indice) {
+                    item.classList.add('ativo');
+                }
+            });
+        }
+
+        document.getElementById('proximo').addEventListener('click', () => {
+            indiceAtual = (indiceAtual + 1) % depoimentos.length;
+            mostrarDepoimento(indiceAtual);
+        });
+
+        document.getElementById('anterior').addEventListener('click', () => {
+            indiceAtual = (indiceAtual - 1 + depoimentos.length) % depoimentos.length;
+            mostrarDepoimento(indiceAtual);
+        });
+    </script>
+
+</body>
+
+</html>
